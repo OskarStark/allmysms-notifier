@@ -1,0 +1,43 @@
+{
+    "name": "qdequippe/allmysms-notifier",
+    "type": "symfony-bridge",
+    "description": "AllMySMS Bridge for Symfony Notifier",
+    "keywords": ["sms", "allmysms", "notifier"],
+    "homepage": "https://github.com/qdequippe/allmysms-notifier",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Quentin Dequippe",
+            "email": "quentin@dequippe.tech"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "symfony/event-dispatcher": "^4.3|^5.0",
+        "symfony/event-dispatcher-contracts": "^1.1",
+        "symfony/http-client": "^4.3|^5.0",
+        "symfony/notifier": "^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.4"
+    },
+    "autoload": {
+        "psr-4": { "Notifier\\Bridge\\AllMySMS\\": "" },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Notifier\\Bridge\\AllMySMS\\Tests\\": "Tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
