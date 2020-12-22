@@ -64,7 +64,7 @@ final class AllMySMSTransportTest extends TestCase
 
     public function test_to_string(): void
     {
-        $this->assertSame('allmysms://' . $this->login . ':' . $this->apiKey . '@localhost?from=' . $this->tpoa, $this->transport->__toString());
+        $this->assertSame('allmysms://localhost?from=' . $this->tpoa, $this->transport->__toString());
     }
 
     public function test_supports(): void
