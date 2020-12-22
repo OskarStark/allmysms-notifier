@@ -30,7 +30,7 @@ final class AllMySMSTransport extends AbstractTransport
 
     public function __toString(): string
     {
-        return sprintf('allmysms://%s:%s@%s?from=%s', $this->login, $this->apiKey, $this->getEndpoint(), $this->tpoa);
+        return sprintf('allmysms://%s?from=%s', $this->getEndpoint(), $this->tpoa);
     }
 
     public function supports(MessageInterface $message): bool
